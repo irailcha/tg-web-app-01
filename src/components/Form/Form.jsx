@@ -17,7 +17,7 @@ const Form = () => {
       subject,
     };
     tg.onSendData(JSON.stringify(data));
-  }, []);
+  }, [name, country, street, subject]);
 
   useEffect(() => {
     Telegram.WebApp.onEvent("mainButtonClicked", onSendData);
