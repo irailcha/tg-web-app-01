@@ -12,7 +12,7 @@ export function useTelegram(params) {
       tg.MainButton.show();
     }
   };
-
+  ("");
   return {
     onClose,
     onToggleButton,
