@@ -1,0 +1,17 @@
+.item {
+  height: auto;
+  width: 100px;
+  border: 1px solid #000;
+  border-radius: 4px;
+  background-color: var(--tg-theme-bg-color);
+}
+
+.title {
+  color: var(--tg-theme-text-color);
+}
+.description {
+  color: var(--tg-theme-hint-color);
+}
+.price {
+  color: var(--tg-theme-button-text-color);
+}

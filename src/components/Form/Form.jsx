@@ -64,7 +64,7 @@ const Form = () => {
     <div className="form-container">
       <h1>Enter your details</h1>
       <form className="form" onSubmit={onSubmit}>
-        <label className="form-label" htmlFor="name">
+        <label className="label" htmlFor="name">
           Name:
         </label>
         <input
@@ -76,7 +76,7 @@ const Form = () => {
           value={name}
           onChange={onChangeName}
         />
-        <label className="form-label" htmlFor="name">
+        <label className="label" htmlFor="name">
           Country:
         </label>
         <input
@@ -88,7 +88,7 @@ const Form = () => {
           value={country}
           onChange={onChangeCountry}
         />
-        <label className="form-label" htmlFor="name">
+        <label className="label" htmlFor="name">
           City:
         </label>
         <input

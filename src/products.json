@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "name": "Apple",
+    "description": "Fresh red apple",
+    "price": 0.5,
+    "img": "https://example.com/images/apple.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Banana",
+    "description": "Ripe yellow banana",
+    "price": 0.3,
+    "img": "https://example.com/images/banana.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Orange",
+    "description": "Juicy orange orange",
+    "price": 0.7,
+    "img": "https://example.com/images/orange.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Strawberry",
+    "description": "Sweet fresh strawberries",
+    "price": 1.5,
+    "img": "https://example.com/images/strawberry.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Grapes",
+    "description": "Seedless green grapes",
+    "price": 2.0,
+    "img": "https://example.com/images/grapes.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Watermelon",
+    "description": "Large juicy watermelon",
+    "price": 3.0,
+    "img": "https://example.com/images/watermelon.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Pineapple",
+    "description": "Tropical sweet pineapple",
+    "price": 2.5,
+    "img": "https://example.com/images/pineapple.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Blueberry",
+    "description": "Fresh organic blueberries",
+    "price": 4.0,
+    "img": "https://example.com/images/blueberry.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Mango",
+    "description": "Sweet and ripe mango",
+    "price": 1.8,
+    "img": "https://example.com/images/mango.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Avocado",
+    "description": "Creamy ripe avocado",
+    "price": 1.2,
+    "img": "https://example.com/images/avocado.jpg"
+  }
+]
