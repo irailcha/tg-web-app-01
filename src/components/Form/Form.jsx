@@ -17,7 +17,7 @@ const Form = () => {
       subject,
     };
     tg.sendData(JSON.stringify(data));
-  }, [name, country, city, subject]);
+  }, [name, country, city, subject, tg]);
 
   useEffect(() => {
     Telegram.WebApp.onEvent("mainButtonClicked", onSendData);
@@ -31,7 +31,7 @@ const Form = () => {
     tg.MainButton.setParams({
       text: "Send",
     });
-  }, []);
+  }, [tg]);
 
   useEffect(() => {
     if (!country || !city) {
@@ -55,10 +55,15 @@ const Form = () => {
     setSubject(e.target.value);
   };
 
+  const onSubmit = (e) => {
+    e.preventDefault();
+    onSendData();
+  };
+
   return (
     <div className="form-container">
       <h1>Enter your details</h1>
-      <form className="form">
+      <form className="form" onSubmit={onSubmit}>
         <label className="form-label" htmlFor="name">
           Name:
         </label>
