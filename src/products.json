@@ -4,69 +4,69 @@
     "name": "Apple",
     "description": "Fresh red apple",
     "price": 0.5,
-    "img": "https://example.com/images/apple.jpg"
+    "img": "/images/apple.jpg"
   },
   {
     "id": 2,
     "name": "Banana",
     "description": "Ripe yellow banana",
     "price": 0.3,
-    "img": "https://example.com/images/banana.jpg"
+    "img": "/images/banana.jpg"
   },
   {
     "id": 3,
-    "name": "Orange",
-    "description": "Juicy orange orange",
+    "name": "Raspberry",
+    "description": "Juicy raspberry",
     "price": 0.7,
-    "img": "https://example.com/images/orange.jpg"
+    "img": "/images/raspberry.jpg"
   },
   {
     "id": 4,
     "name": "Strawberry",
     "description": "Sweet fresh strawberries",
     "price": 1.5,
-    "img": "https://example.com/images/strawberry.jpg"
+    "img": "/images/strawberry.jpg"
   },
   {
     "id": 5,
-    "name": "Grapes",
-    "description": "Seedless green grapes",
+    "name": "Kiwi",
+    "description": "Seedless green kiwi",
     "price": 2.0,
-    "img": "https://example.com/images/grapes.jpg"
+    "img": "/images/kiwi.jpg"
   },
   {
     "id": 6,
-    "name": "Watermelon",
-    "description": "Large juicy watermelon",
+    "name": "Lemon",
+    "description": "Yellow juicy lemon ",
     "price": 3.0,
-    "img": "https://example.com/images/watermelon.jpg"
+    "img": "/images/lemon.jpg"
   },
   {
     "id": 7,
     "name": "Pineapple",
     "description": "Tropical sweet pineapple",
     "price": 2.5,
-    "img": "https://example.com/images/pineapple.jpg"
+    "img": "/images/pineapple.jpg"
   },
   {
     "id": 8,
-    "name": "Blueberry",
-    "description": "Fresh organic blueberries",
+    "name": "Peach",
+    "description": "Fresh organic peaches",
     "price": 4.0,
-    "img": "https://example.com/images/blueberry.jpg"
+    "img": "/images/peach.jpg"
   },
   {
     "id": 9,
     "name": "Mango",
     "description": "Sweet and ripe mango",
     "price": 1.8,
-    "img": "https://example.com/images/mango.jpg"
+    "img": "/images/mango.jpg"
   },
   {
     "id": 10,
     "name": "Avocado",
     "description": "Creamy ripe avocado",
     "price": 1.2,
-    "img": "https://example.com/images/avocado.jpg"
+    "img": "/images/avokado.jpg"
   }
 ]

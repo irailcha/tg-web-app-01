@@ -1,9 +1,10 @@
-.item {
-  height: auto;
-  width: 100px;
-  border: 1px solid #000;
-  border-radius: 4px;
-  background-color: var(--tg-theme-bg-color);
+.img {
+  height: 100px;
+  width: 100%;
+  border: 1px solid var(--tg-theme-button-color);
+  background-color: lightgrey;
+  margin: 0 auto;
+  object-fit: cover;
 }
 
 .title {
@@ -14,4 +15,15 @@
 }
 .price {
   color: var(--tg-theme-button-text-color);
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  height: auto;
+  width: 170px;
+  border: 1px solid var(--tg-theme-button-color);
+  border-radius: 4px;
+  background-color: var(--tg-theme-bg-color);
 }

@@ -1,14 +1,7 @@
-.listItem {
+.list-product {
   display: flex;
-  gap: 10px;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-}
-
-.item {
-  height: auto;
-  width: 100px;
-  border: 1px solid #000;
-  border-radius: 4px;
-  background-color: var(--tg-theme-bg-color);
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
 }
