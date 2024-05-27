@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 import ProductItem from "../ProductItem/ProductItem";
 import products from "../../products.json";
-import Button from "../Button/Button";
 import { useTelegram } from "../../hooks/useTelegram";
 
 const getTotalPrice = (items = []) => {
@@ -11,8 +12,32 @@ const getTotalPrice = (items = []) => {
 };
 
 const ProductList = () => {
-  const { tg } = useTelegram();
+  const { tg, queryId } = useTelegram();
   const [addedProducts, setAddedProducts] = useState([]);
+  const navigate = useNavigate();
+
+  const onSendData = useCallback(() => {
+    const data = {
+      products: addedProducts,
+      total: getTotalPrice(addedProducts),
+      queryId,
+    };
+    tg.sendData(JSON.stringify(data));
+
+    axios({
+      method: "post",
+      url: "http://localhost:3000/",
+      data: data,
+    });
+    navigate("/form", { replace: true });
+  }, []);
+
+  useEffect(() => {
+    tg.onEvent("mainButtonClicked", onSendData);
+    return () => {
+      tg.offEvent("mainButtonClicked", onSendData);
+    };
+  }, [onSendData]);
 
   const onAdd = (product) => {
     const isAdded = addedProducts.find((item) => item.id === product.id);
