@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from "react";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import ProductItem from "../ProductItem/ProductItem";
 import products from "../../products.json";
@@ -14,7 +14,7 @@ const getTotalPrice = (items = []) => {
 const ProductList = () => {
   const { tg, queryId } = useTelegram();
   const [addedProducts, setAddedProducts] = useState([]);
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const onSendData = useCallback(() => {
     const data = {
@@ -22,15 +22,16 @@ const ProductList = () => {
       totalPrice: getTotalPrice(addedProducts),
       queryId,
     };
-    tg.sendData(JSON.stringify(data));
+    tg.sendData(JSON.stringify({ data: JSON.stringify(data) }));
 
     axios({
       method: "post",
-      url: "http://localhost:3000/",
+      url: "https://tg-bot-01.onrender.com/",
       data: data,
     })
       .then((response) => {
         console.log("Data sent successfully:", response.data);
+        navigate("/form");
       })
       .catch((error) => {
         console.error("There was an error sending the data:", error);
