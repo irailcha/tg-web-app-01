@@ -20,9 +20,7 @@ const ProductItem = ({ product, onAdd }) => {
         />
         <h3 className="title">{title}</h3>
         <p className="description">{description}</p>
-        <p className="price">
-          Price:<span>{price}</span>
-        </p>
+        <p className="price">Price:{price}</p>
         <Button onClick={onAddHandler}>Add to basket</Button>
       </div>
     </>

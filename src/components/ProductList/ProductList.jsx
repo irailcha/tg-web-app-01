@@ -36,7 +36,7 @@ const ProductList = () => {
       .catch((error) => {
         console.error("There was an error sending the data:", error);
       });
-  }, [addedProducts, tg]);
+  }, [addedProducts, tg, queryId]);
 
   useEffect(() => {
     tg.onEvent("mainButtonClicked", onSendData);
