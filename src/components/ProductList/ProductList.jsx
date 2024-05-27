@@ -19,24 +19,30 @@ const ProductList = () => {
   const onSendData = useCallback(() => {
     const data = {
       products: addedProducts,
-      total: getTotalPrice(addedProducts),
+      totalPrice: getTotalPrice(addedProducts),
       queryId,
     };
     tg.sendData(JSON.stringify(data));
 
     axios({
       method: "post",
-      url: "https://tg-bot-01.onrender.com/",
+      url: "http://localhost:3000/",
       data: data,
-    });
-  }, []);
+    })
+      .then((response) => {
+        console.log("Data sent successfully:", response.data);
+      })
+      .catch((error) => {
+        console.error("There was an error sending the data:", error);
+      });
+  }, [addedProducts, tg]);
 
   useEffect(() => {
     tg.onEvent("mainButtonClicked", onSendData);
     return () => {
       tg.offEvent("mainButtonClicked", onSendData);
     };
-  }, [onSendData]);
+  }, [onSendData, tg]);
 
   const onAdd = (product) => {
     const isAdded = addedProducts.find((item) => item.id === product.id);
@@ -62,7 +68,7 @@ const ProductList = () => {
     <div>
       <ul className="list-product">
         {products.map((product) => (
-          <li key={product.id}>
+          <li className="product" key={product.id}>
             <ProductItem product={product} onAdd={onAdd} />
           </li>
         ))}
