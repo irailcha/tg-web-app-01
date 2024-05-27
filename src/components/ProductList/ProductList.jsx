@@ -26,7 +26,7 @@ const ProductList = () => {
 
     axios({
       method: "post",
-      url: "http://localhost:3000/",
+      url: "https://tg-bot-01.onrender.com/",
       data: data,
     });
   }, []);
