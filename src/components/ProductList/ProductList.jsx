@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import ProductItem from "../ProductItem/ProductItem";
 import products from "../../products.json";
@@ -14,7 +14,7 @@ const getTotalPrice = (items = []) => {
 const ProductList = () => {
   const { tg, queryId } = useTelegram();
   const [addedProducts, setAddedProducts] = useState([]);
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const onSendData = useCallback(() => {
     const data = {
@@ -29,7 +29,6 @@ const ProductList = () => {
       url: "http://localhost:3000/",
       data: data,
     });
-    navigate("/form", { replace: true });
   }, []);
 
   useEffect(() => {
