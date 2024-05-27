@@ -22,7 +22,7 @@ const ProductList = () => {
       totalPrice: getTotalPrice(addedProducts),
       queryId,
     };
-    tg.sendData(JSON.stringify({ data: JSON.stringify(data) }));
+    tg.sendData(JSON.stringify(data));
 
     axios({
       method: "post",
