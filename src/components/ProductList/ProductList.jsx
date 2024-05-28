@@ -21,20 +21,15 @@ const ProductList = () => {
       totalPrice: getTotalPrice(addedProducts),
       queryId,
     };
-    tg.sendData(JSON.stringify(data));
 
-    axios({
-      method: "post",
-      url: "https://tg-bot-01.onrender.com/",
-      data: data,
-    })
-      .then((response) => {
-        console.log("Data sent successfully:", response.data);
-      })
-      .catch((error) => {
-        console.error("There was an error sending the data:", error);
-      });
-  }, [addedProducts, tg, queryId]);
+    fetch("https://tg-bot-01.onrender.com/", {
+      method: "POST",
+      headers: {
+        "Content type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+  }, []);
 
   useEffect(() => {
     tg.onEvent("mainButtonClicked", onSendData);
