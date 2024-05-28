@@ -1,70 +1,70 @@
 [
   {
     "id": 1,
-    "name": "Apple",
+    "title": "Apple",
     "description": "Fresh red apple",
     "price": 0.5,
     "img": "/images/apple.jpg"
   },
   {
     "id": 2,
-    "name": "Banana",
+    "title": "Banana",
     "description": "Ripe yellow banana",
     "price": 0.3,
     "img": "/images/banana.jpg"
   },
   {
     "id": 3,
-    "name": "Raspberry",
+    "title": "Raspberry",
     "description": "Juicy raspberry",
     "price": 0.7,
     "img": "/images/raspberry.jpg"
   },
   {
     "id": 4,
-    "name": "Strawberry",
+    "title": "Strawberry",
     "description": "Sweet fresh strawberries",
     "price": 1.5,
     "img": "/images/strawberry.jpg"
   },
   {
     "id": 5,
-    "name": "Kiwi",
+    "title": "Kiwi",
     "description": "Seedless green kiwi",
     "price": 2.0,
     "img": "/images/kiwi.jpg"
   },
   {
     "id": 6,
-    "name": "Lemon",
+    "title": "Lemon",
     "description": "Yellow juicy lemon ",
     "price": 3.0,
     "img": "/images/lemon.jpg"
   },
   {
     "id": 7,
-    "name": "Pineapple",
+    "title": "Pineapple",
     "description": "Tropical sweet pineapple",
     "price": 2.5,
     "img": "/images/pineapple.jpg"
   },
   {
     "id": 8,
-    "name": "Peach",
+    "title": "Peach",
     "description": "Fresh organic peaches",
     "price": 4.0,
     "img": "/images/peach.jpg"
   },
   {
     "id": 9,
-    "name": "Mango",
+    "title": "Mango",
     "description": "Sweet and ripe mango",
     "price": 1.8,
     "img": "/images/mango.jpg"
   },
   {
     "id": 10,
-    "name": "Avocado",
+    "title": "Avocado",
     "description": "Creamy ripe avocado",
     "price": 1.2,
     "img": "/images/avokado.jpg"
