@@ -29,11 +29,13 @@ const ProductList = () => {
       },
       body: JSON.stringify(data),
     });
+
+    navigate("/form");
   }, [addedProducts]);
 
   useEffect(() => {
     tg.onEvent("mainButtonClicked", onSendData);
-    navigate("/form");
+
     return () => {
       tg.offEvent("mainButtonClicked", onSendData);
     };
