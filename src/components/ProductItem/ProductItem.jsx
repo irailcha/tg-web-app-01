@@ -3,7 +3,7 @@ import "./ProductItem.css";
 import Button from "../Button/Button";
 
 const ProductItem = ({ product, onAdd }) => {
-  const { title, description, price, img } = product;
+  const { title, description, price, img, amount } = product;
 
   const onAddHandler = () => {
     onAdd(product);
@@ -22,6 +22,7 @@ const ProductItem = ({ product, onAdd }) => {
         <p className="description">{description}</p>
         <p className="price">Price:{price}</p>
         <Button onClick={onAddHandler}>Add to basket</Button>
+        <span class="amount">{amount}</span>
       </div>
     </>
   );

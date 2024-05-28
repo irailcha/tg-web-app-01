@@ -12,7 +12,7 @@ const getTotalPrice = (items = []) => {
 
 const ProductList = () => {
   const { tg, queryId } = useTelegram();
-
+  const [amount, setAmount] = useState(0);
   const [addedProducts, setAddedProducts] = useState([]);
 
   const onSendData = useCallback(() => {
@@ -40,15 +40,9 @@ const ProductList = () => {
   }, [onSendData, tg]);
 
   const onAdd = (product) => {
-    const isAdded = addedProducts.find((item) => item.id === product.id);
-
     let newProd = [];
-    if (!isAdded) {
-      newProd = [...addedProducts, product];
-    } else {
-      newProd = addedProducts.filter((item) => item.id !== product.id);
-    }
-
+    newProd = [...addedProducts, product];
+    setAmount((prevState) => prevState + 1);
     setAddedProducts(newProd);
 
     if (newProd.length === 0) {

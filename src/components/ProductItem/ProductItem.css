@@ -28,3 +28,13 @@
   border-radius: 4px;
   background-color: var(--tg-theme-bg-color);
 }
+
+.amount {
+  position: absolute;
+  border: 1px solid var(--tg-theme-button-color);
+  border-radius: 50px;
+  width: 15px;
+  height: 15px;
+  top: 10px;
+  right: 10px;
+}
