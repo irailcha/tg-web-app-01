@@ -14,7 +14,7 @@
   color: var(--tg-theme-hint-color);
 }
 .price {
-  color: var(--tg-theme-button-text-color);
+  color: var(--tg-theme-text-color);
 }
 
 .item {
