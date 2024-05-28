@@ -22,14 +22,14 @@ const ProductList = () => {
       queryId,
     };
 
-    fetch("https://tg-bot-01.onrender.com/", {
+    fetch("http://localhost:3000/", {
       method: "POST",
       headers: {
-        "Content type": "application/json",
+        "Content-Type": "application/json",
       },
       body: JSON.stringify(data),
     });
-  }, []);
+  }, [addedProducts]);
 
   useEffect(() => {
     tg.onEvent("mainButtonClicked", onSendData);
