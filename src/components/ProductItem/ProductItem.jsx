@@ -22,7 +22,7 @@ const ProductItem = ({ product, onAdd }) => {
         <p className="description">{description}</p>
         <p className="price">Price:{price}</p>
         <Button onClick={onAddHandler}>Add to basket</Button>
-        <span class="amount">{amount}</span>
+        <span className="amount">{amount || 0}</span>
       </div>
     </>
   );
