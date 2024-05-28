@@ -28,10 +28,14 @@ const ProductList = () => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(data),
-    });
-
-    navigate("/form");
-  }, [addedProducts]);
+    })
+      .then(() => {
+        navigate("/form");
+      })
+      .catch((error) => {
+        console.error("Error sending data:", error);
+      });
+  }, [addedProducts, queryId, navigate]);
 
   useEffect(() => {
     tg.onEvent("mainButtonClicked", onSendData);
