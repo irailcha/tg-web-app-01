@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+
 import ProductItem from "../ProductItem/ProductItem";
 import products from "../../products.json";
 import { useTelegram } from "../../hooks/useTelegram";
@@ -12,7 +12,7 @@ const getTotalPrice = (items = []) => {
 
 const ProductList = () => {
   const { tg, queryId } = useTelegram();
-  const navigate = useNavigate();
+
   const [addedProducts, setAddedProducts] = useState([]);
 
   const onSendData = useCallback(() => {
@@ -28,14 +28,8 @@ const ProductList = () => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(data),
-    })
-      .then(() => {
-        navigate("/form");
-      })
-      .catch((error) => {
-        console.error("Error sending data:", error);
-      });
-  }, [addedProducts, queryId, navigate]);
+    });
+  }, [addedProducts, queryId]);
 
   useEffect(() => {
     tg.onEvent("mainButtonClicked", onSendData);
