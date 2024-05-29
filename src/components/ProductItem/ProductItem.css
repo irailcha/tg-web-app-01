@@ -22,7 +22,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 225px;
+  height: 250px;
   padding: 15px;
   width: 170px;
   border: 1px solid var(--tg-theme-button-color);
@@ -32,11 +32,31 @@
 
 .amount {
   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--tg-theme-text-color);
+}
+
+.amount-container {
+  position: absolute;
   border: 1px solid var(--tg-theme-text-color);
   background-color: var(--tg-theme-secondary-bg-color);
   border-radius: 50px;
-  width: 30px;
-  height: 30px;
-  top: 10px;
-  right: 10px;
+  width: 35px;
+  height: 35px;
+  top: 8px;
+  right: 8px;
+}
+
+.button-container {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.product-button {
+  border-radius: 50px;
+  width: 35px;
+  height: 35px;
 }
