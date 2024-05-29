@@ -4,13 +4,14 @@ import Button from "../Button/Button";
 
 const ProductItem = ({ product, onAdd, onDelete, amount }) => {
   const { title, description, price, img } = product;
-  const isDisabled = product.id === 0;
+  const isDisabled = product.id.length === 0;
+
   const onAddHandler = () => {
-    onAdd(product);
+    onAdd(product.productId);
   };
 
   const onDeleteHandler = () => {
-    onDelete(product);
+    onDelete(product.productId);
   };
 
   return (

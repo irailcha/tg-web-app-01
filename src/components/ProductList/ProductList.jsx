@@ -21,6 +21,7 @@ const ProductList = () => {
       products: addedProducts,
       totalPrice,
       queryId,
+      amount,
     };
 
     fetch("https://tg-bot-01.onrender.com/", {
@@ -30,7 +31,7 @@ const ProductList = () => {
       },
       body: JSON.stringify(data),
     });
-  }, [addedProducts, totalPrice, queryId]);
+  }, [addedProducts, totalPrice, queryId, amount]);
 
   useEffect(() => {
     tg.onEvent("mainButtonClicked", onSendData);
@@ -55,8 +56,8 @@ const ProductList = () => {
     [tg]
   );
 
-  const onAdd = (product) => {
-    const newProd = [...addedProducts, product];
+  const onAdd = (productId) => {
+    const newProd = [...addedProducts, { id: productId }];
     setAmount((prevState) => prevState + 1);
     setAddedProducts(newProd);
     updateMainButton(newProd);
